@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="教程,Hexo," />
 
 
 
@@ -82,14 +82,18 @@
 
 
 
+<meta name="description" content="Hexo + GitHub Pages 搭建个人博客教程">
+<meta name="keywords" content="教程,Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo使用日记（一）">
 <meta property="og:url" content="https://ruoliang.top/2018/02/08/hexo使用日记/index.html">
 <meta property="og:site_name" content="Ruo Liang&#39;s Blog">
+<meta property="og:description" content="Hexo + GitHub Pages 搭建个人博客教程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-08T10:06:43.657Z">
+<meta property="og:updated_time" content="2018-02-08T16:13:46.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo使用日记（一）">
+<meta name="twitter:description" content="Hexo + GitHub Pages 搭建个人博客教程">
 
 
 
@@ -336,6 +340,10 @@
           
 
           
+              <div class="post-description">
+                  Hexo + GitHub Pages 搭建个人博客教程
+              </div>
+          
 
         </div>
       </header>
@@ -350,7 +358,27 @@
       
 
       
-        
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="Hexo-是什么"><a href="#Hexo-是什么" class="headerlink" title="Hexo 是什么"></a>Hexo 是什么</h2><blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>
+<p>Hexo 是一款基于Node.js的静态博客框架，可直接部署在 GitHub 上。GitHub Pages 服务目前提供免费的 1 GB 文件存储空间和每月 100 GB 的流量。Hexo 是非常适合搭建个人博客的框架之一。</p>
+<blockquote>
+<p>GitHub Pages sites are subject to the following usage limits:</p>
+<ul>
+<li>GitHub Pages source repositories have a <a href="https://help.github.com/articles/what-is-my-disk-quota/#file-and-repository-size-limitations" target="_blank" rel="noopener">recommended limit of 1GB</a> .  </li>
+<li>Published GitHub Pages sites may be no larger than 1 GB.</li>
+<li>GitHub Pages sites have a <em>soft</em> bandwidth limit of 100GB per month.</li>
+<li>GitHub Pages sites have a <em>soft</em> limit of 10 builds per hour.</li>
+</ul>
+</blockquote>
+<h2 id="为什么使用-Hexo-来搭建-Blog"><a href="#为什么使用-Hexo-来搭建-Blog" class="headerlink" title="为什么使用 Hexo 来搭建 Blog"></a>为什么使用 Hexo 来搭建 Blog</h2><p>Blog 有多种搭建方式，Hexo + GitHub Page 无疑是最合适的方案之一。下面阐述原因：</p>
+<ol>
+<li>GitHub Page 由 GitHub 提供，用于托管个人、组织或项目页面。这意味着无需再在云服务器上花费时间和精力，可直接通过 Git<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="更多关于Git的详细内容请参见[廖雪峰的Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000) ">[1]</span></a></sup> 将本地的文件部署至 GitHub 存储库，即可完成网站的推送。</li>
+<li>Hexo 仅依赖于 Node.js，易于安装。</li>
+<li>Hexo 官网文档对中文支持十分友好，且有数以千计的主题、插件供使用。</li>
+</ol>
+<p>在搭建开始前请认真阅读<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 官方文档</a> 。</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">更多关于Git的详细内容请参见<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的Git教程</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
       
     </div>
     
@@ -364,6 +392,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+        </div>
       
 
       
@@ -439,8 +475,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -472,7 +517,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -505,6 +550,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-是什么"><span class="nav-number">1.</span> <span class="nav-text">Hexo 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么使用-Hexo-来搭建-Blog"><span class="nav-number">2.</span> <span class="nav-text">为什么使用 Hexo 来搭建 Blog</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
