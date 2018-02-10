@@ -85,14 +85,14 @@
 <meta name="description" content="Hexo + GitHub Pages 搭建个人博客教程">
 <meta name="keywords" content="教程,Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo使用日记（一）">
+<meta property="og:title" content="Hexo 使用日记（一）">
 <meta property="og:url" content="https://ruoliang.top/2018/02/08/hexo使用日记/index.html">
 <meta property="og:site_name" content="Ruo Liang&#39;s Blog">
 <meta property="og:description" content="Hexo + GitHub Pages 搭建个人博客教程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-10T03:35:30.575Z">
+<meta property="og:updated_time" content="2018-02-10T12:27:58.078Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo使用日记（一）">
+<meta name="twitter:title" content="Hexo 使用日记（一）">
 <meta name="twitter:description" content="Hexo + GitHub Pages 搭建个人博客教程">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>Hexo使用日记（一） | Ruo Liang's Blog</title>
+  <title>Hexo 使用日记（一） | Ruo Liang's Blog</title>
   
 
 
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo使用日记（一）</h1>
+          <h1 class="post-title" itemprop="name headline">Hexo 使用日记（一）</h1>
         
 
         <div class="post-meta">
@@ -384,11 +384,11 @@
 <li>配置 Hexo</li>
 <li>推送网站</li>
 <li>申请、绑定个人域名</li>
-<li>个性化设置</li>
 <li>写作</li>
+<li>个性化设置</li>
 <li>其他</li>
 </ol>
-<p>在搭建开始前请认真阅读<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 官方文档</a> 。  </p>
+<p>在搭建开始前请仔细阅读 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 官方文档</a> 。  </p>
 <h3 id="在-GitHub-上创建个人仓库"><a href="#在-GitHub-上创建个人仓库" class="headerlink" title="在 GitHub 上创建个人仓库"></a>在 GitHub 上创建个人仓库</h3><ul>
 <li>登陆 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> （若无账号请注册）</li>
 <li>点击 <code>New repository</code> 创建新仓库<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="GitHubo Pages 服务的仓库名一般为**Username**.github.io ">[2]</span></a></sup></li>
@@ -430,6 +430,44 @@
 <p><code>$ nvm install stable</code></p>
 <p>或者您也可以下载 <a href="http://nodejs.org/" target="_blank" rel="noopener">安装程序</a> 来安装。</p>
 </blockquote>
+<h3 id="配置-Hexo"><a href="#配置-Hexo" class="headerlink" title="配置 Hexo"></a>配置 Hexo</h3><h4 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h4><ul>
+<li><p>在本地新建文件夹作为 Hexo 的本地目录</p>
+</li>
+<li><p>在文件夹内按下<code>Shift</code>后单击<code>鼠标右键</code>打开 Powershell</p>
+</li>
+<li><p>使用 npm 安装 Hexo ：</p>
+<p><code>$ npm install -g hexo-cli</code>（安装过程较长，请耐心等待）</p>
+</li>
+</ul>
+<h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><ul>
+<li><code>npm install hexo -g</code>        安装 Hexo</li>
+<li><code>npm update hexo -g</code>        升级 Hexo</li>
+<li><code>hexo init</code>        初始化站点</li>
+<li><code>hexo new yourtitle</code>        新建 post （可简写为<code>hexo n yourtitle</code>）</li>
+<li><code>hexo clean</code>        清除缓存</li>
+<li><code>hexo generate</code>        生成静态文件（可简写为<code>hexo g</code>）</li>
+<li><code>hexo deploy</code>        部署网站（可简写为<code>hexo d</code>）</li>
+</ul>
+<h3 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h3><ul>
+<li><p>在建好的 blog 根目录中找到<code>_config.yml</code>文件，在文件末尾修改 deploy 代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">type: git</span><br><span class="line">repo: GitHub仓库的路径 .git（末尾加.git后缀）</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>​    保存文件</p>
+<ul>
+<li><p>安装 Git 部署插件：</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+</li>
+<li><p>部署 Blog 至 GitHub：</p>
+<p>在 Powershell 中依次键入以下指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>访问网站</p>
+<p>在浏览器地址栏键入<code>仓库名.github.io</code>，即可访问。</p>
+</li>
+</ul>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">更多关于Git的详细内容请参见 <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的Git教程</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">GitHubo Pages 服务的仓库名一般为<strong>Username</strong>.github.io<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
       
     </div>
@@ -612,7 +650,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-是什么"><span class="nav-number">1.</span> <span class="nav-text">Hexo 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么使用-Hexo-来搭建-Blog"><span class="nav-number">2.</span> <span class="nav-text">为什么使用 Hexo 来搭建 Blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建步骤"><span class="nav-number">3.</span> <span class="nav-text">搭建步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在-GitHub-上创建个人仓库"><span class="nav-number">3.1.</span> <span class="nav-text">在 GitHub 上创建个人仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Git"><span class="nav-number">3.2.</span> <span class="nav-text">配置 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">3.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定-Git-与-GitHub"><span class="nav-number">3.2.2.</span> <span class="nav-text">绑定 Git 与 GitHub</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Node-js"><span class="nav-number">3.3.</span> <span class="nav-text">配置  Node.js</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-是什么"><span class="nav-number">1.</span> <span class="nav-text">Hexo 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么使用-Hexo-来搭建-Blog"><span class="nav-number">2.</span> <span class="nav-text">为什么使用 Hexo 来搭建 Blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建步骤"><span class="nav-number">3.</span> <span class="nav-text">搭建步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在-GitHub-上创建个人仓库"><span class="nav-number">3.1.</span> <span class="nav-text">在 GitHub 上创建个人仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Git"><span class="nav-number">3.2.</span> <span class="nav-text">配置 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">3.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定-Git-与-GitHub"><span class="nav-number">3.2.2.</span> <span class="nav-text">绑定 Git 与 GitHub</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Node-js"><span class="nav-number">3.3.</span> <span class="nav-text">配置  Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Hexo"><span class="nav-number">3.4.</span> <span class="nav-text">配置 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">3.4.1.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用指令"><span class="nav-number">3.4.2.</span> <span class="nav-text">常用指令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推送网站"><span class="nav-number">3.5.</span> <span class="nav-text">推送网站</span></a></li></ol></li></ol></div>
             
 
           </div>
