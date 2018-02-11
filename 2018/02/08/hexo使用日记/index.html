@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="Ruo Liang&#39;s Blog">
 <meta property="og:description" content="Hexo + GitHub Pages 搭建个人博客教程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-10T12:27:58.078Z">
+<meta property="og:updated_time" content="2018-02-11T06:30:15.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 使用日记（一）">
 <meta name="twitter:description" content="Hexo + GitHub Pages 搭建个人博客教程">
@@ -391,7 +391,8 @@
 <p>在搭建开始前请仔细阅读 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 官方文档</a> 。  </p>
 <h3 id="在-GitHub-上创建个人仓库"><a href="#在-GitHub-上创建个人仓库" class="headerlink" title="在 GitHub 上创建个人仓库"></a>在 GitHub 上创建个人仓库</h3><ul>
 <li>登陆 <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> （若无账号请注册）</li>
-<li>点击 <code>New repository</code> 创建新仓库<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="GitHubo Pages 服务的仓库名一般为**Username**.github.io ">[2]</span></a></sup></li>
+<li>点击 <code>New repository</code> 创建新仓库<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="GitHubo Pages 服务的仓库名一般为**Username**.github.io 
+">[2]</span></a></sup></li>
 </ul>
 <h3 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h3><p>Git 是目前世界上最先进的分布式版本控制系统（没有之一）。通过 Git 可将本地搭建好的网站直接部署到刚刚创建的 GitHub 存储库里。</p>
 <h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ul>
@@ -439,26 +440,20 @@
 <p><code>$ npm install -g hexo-cli</code>（安装过程较长，请耐心等待）</p>
 </li>
 </ul>
-<h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><ul>
-<li><code>npm install hexo -g</code>        安装 Hexo</li>
-<li><code>npm update hexo -g</code>        升级 Hexo</li>
-<li><code>hexo init</code>        初始化站点</li>
-<li><code>hexo new yourtitle</code>        新建 post （可简写为<code>hexo n yourtitle</code>）</li>
-<li><code>hexo clean</code>        清除缓存</li>
-<li><code>hexo generate</code>        生成静态文件（可简写为<code>hexo g</code>）</li>
-<li><code>hexo deploy</code>        部署网站（可简写为<code>hexo d</code>）</li>
-</ul>
+<h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><p><code>npm install hexo -g</code>        安装 Hexo</p>
+<p><code>npm update hexo -g</code>        升级 Hexo</p>
+<p><code>hexo init</code>        初始化站点</p>
+<p><code>hexo new yourtitle</code>        新建 post （可简写为<code>hexo n yourtitle</code>）</p>
+<p><code>hexo clean</code>        清除缓存</p>
+<p><code>hexo generate</code>        生成静态文件（可简写为<code>hexo g</code>）</p>
+<p><code>hexo deploy</code>        部署网站（可简写为<code>hexo d</code>）</p>
 <h3 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h3><ul>
 <li><p>在建好的 blog 根目录中找到<code>_config.yml</code>文件，在文件末尾修改 deploy 代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">type: git</span><br><span class="line">repo: GitHub仓库的路径 .git（末尾加.git后缀）</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p>  保存文件</p>
 </li>
-</ul>
-<p>​    保存文件</p>
-<ul>
 <li><p>安装 Git 部署插件：</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save</p>
-</blockquote>
+<p><code>npm install hexo-deployer-git --save</code></p>
 </li>
 <li><p>部署 Blog 至 GitHub：</p>
 <p>在 Powershell 中依次键入以下指令：</p>
@@ -468,7 +463,51 @@
 <p>在浏览器地址栏键入<code>仓库名.github.io</code>，即可访问。</p>
 </li>
 </ul>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">更多关于Git的详细内容请参见 <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的Git教程</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">GitHubo Pages 服务的仓库名一般为<strong>Username</strong>.github.io<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
+<h3 id="申请、绑定域名"><a href="#申请、绑定域名" class="headerlink" title="申请、绑定域名"></a>申请、绑定域名</h3><h4 id="域名是什么"><a href="#域名是什么" class="headerlink" title="域名是什么"></a>域名是什么</h4><blockquote>
+<p><strong>域名</strong>（英语：<strong>Domain Name</strong>），简称<strong>域名</strong>、<strong>网域</strong>，是由一串用点分隔的名字组成的 Internet 上某一台<a href="https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA" target="_blank" rel="noopener">计算机</a>或<a href="https://zh.wikipedia.org/w/index.php?title=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">计算机组</a>的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E5%9F%9F%E5%90%8D%E7%A7%B0%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">网域名称系统</a>（<a href="https://zh.wikipedia.org/wiki/DNS" target="_blank" rel="noopener">DNS</a>，Domain Name System，有时也简称为域名）是因特网的一项核心服务，它作为可以将域名和<a href="https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80" target="_blank" rel="noopener">IP地址</a>相互<a href="https://zh.wikipedia.org/wiki/%E6%98%A0%E5%B0%84" target="_blank" rel="noopener">映射</a>的一个分布式数据库，能够使人更方便的访问互联网，而不用去记住能够被机器直接读取的<a href="https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80" target="_blank" rel="noopener">IP地址</a>数串。</p>
+</blockquote>
+<p>例如 <code>www.baidu.com</code>是地址<code>220.181.57.216</code> 的域名</p>
+<h4 id="如何申请域名"><a href="#如何申请域名" class="headerlink" title="如何申请域名"></a>如何申请域名</h4><p>通常情况下域名需要在域名注册服务商处购买，下面推荐几家优秀的域名注册服务商：</p>
+<p><a href="https://sg.godaddy.com/zh" target="_blank" rel="noopener">Godaddy</a></p>
+<ul>
+<li>常规后缀域名价格相对便宜</li>
+<li>客服服务到位</li>
+<li>网站支持中文</li>
+<li>支持支付宝付款</li>
+</ul>
+<p><a href="http://www.name.com" target="_blank" rel="noopener">Name</a></p>
+<ul>
+<li>续费价格和首年注册价格基本一致</li>
+<li>操作面板简洁</li>
+</ul>
+<p><a href="https://www.namecheap.com/" target="_blank" rel="noopener">Namecheap</a></p>
+<ul>
+<li>各方面服务都很到位，性价比最高</li>
+</ul>
+<p>以下是国内的服务商（不推荐使用）：</p>
+<p><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a></p>
+<p><a href="https://cloud.tencent.com/" target="_blank" rel="noopener">腾讯云</a></p>
+<h4 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h4><ul>
+<li><p>登陆 GitHUb ，进入放置 Blog 的仓库，点击<code>settings</code>，找到<code>Custom domain</code>，输入已购买的域名。</p>
+</li>
+<li><p>进入本地 Blog 文件夹，在<code>/source</code>目录下新建记事本文档，修改文件名为<code>CNAME</code> 。</p>
+</li>
+<li><p>键入已购买的域名，保存文件类型为<code>所有文件</code>。（注：键入域名时无需带有 www ）</p>
+</li>
+<li><p>解析域名</p>
+<p>下面提供两种方案：</p>
+<ol>
+<li>在域名所属服务商处直接解析</li>
+<li>在 DNSPos 或 阿里云 解析域名</li>
+</ol>
+<p>两种方案均需在解析中添加<code>CNAME</code>、<code>A</code>两种解析类型，分别解析<code>仓库名.github.io</code>和该网址对应的<code>IP地址</code><sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="IP地址 可在直接在 cmd 中 ping 对应网址得到">[3]</span></a></sup>。</p>
+</li>
+<li><p>部署<code>CNAME</code>至 GIthub ，即可通过自定义域名访问 Blog。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">更多关于Git的详细内容请参见 <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的Git教程</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">GitHubo Pages 服务的仓库名一般为<strong>Username</strong>.github.io<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">IP地址 可在直接在 cmd 中 ping 对应网址得到<a href="#fnref:3" rev="footnote"> ↩</a></span></li></ol></div></div>
       
     </div>
     
@@ -650,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-是什么"><span class="nav-number">1.</span> <span class="nav-text">Hexo 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么使用-Hexo-来搭建-Blog"><span class="nav-number">2.</span> <span class="nav-text">为什么使用 Hexo 来搭建 Blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建步骤"><span class="nav-number">3.</span> <span class="nav-text">搭建步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在-GitHub-上创建个人仓库"><span class="nav-number">3.1.</span> <span class="nav-text">在 GitHub 上创建个人仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Git"><span class="nav-number">3.2.</span> <span class="nav-text">配置 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">3.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定-Git-与-GitHub"><span class="nav-number">3.2.2.</span> <span class="nav-text">绑定 Git 与 GitHub</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Node-js"><span class="nav-number">3.3.</span> <span class="nav-text">配置  Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Hexo"><span class="nav-number">3.4.</span> <span class="nav-text">配置 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">3.4.1.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用指令"><span class="nav-number">3.4.2.</span> <span class="nav-text">常用指令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推送网站"><span class="nav-number">3.5.</span> <span class="nav-text">推送网站</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-是什么"><span class="nav-number">1.</span> <span class="nav-text">Hexo 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么使用-Hexo-来搭建-Blog"><span class="nav-number">2.</span> <span class="nav-text">为什么使用 Hexo 来搭建 Blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建步骤"><span class="nav-number">3.</span> <span class="nav-text">搭建步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在-GitHub-上创建个人仓库"><span class="nav-number">3.1.</span> <span class="nav-text">在 GitHub 上创建个人仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Git"><span class="nav-number">3.2.</span> <span class="nav-text">配置 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">3.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定-Git-与-GitHub"><span class="nav-number">3.2.2.</span> <span class="nav-text">绑定 Git 与 GitHub</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Node-js"><span class="nav-number">3.3.</span> <span class="nav-text">配置  Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-Hexo"><span class="nav-number">3.4.</span> <span class="nav-text">配置 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">3.4.1.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用指令"><span class="nav-number">3.4.2.</span> <span class="nav-text">常用指令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推送网站"><span class="nav-number">3.5.</span> <span class="nav-text">推送网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#申请、绑定域名"><span class="nav-number">3.6.</span> <span class="nav-text">申请、绑定域名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#域名是什么"><span class="nav-number">3.6.1.</span> <span class="nav-text">域名是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何申请域名"><span class="nav-number">3.6.2.</span> <span class="nav-text">如何申请域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定域名"><span class="nav-number">3.6.3.</span> <span class="nav-text">绑定域名</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
