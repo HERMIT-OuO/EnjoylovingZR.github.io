@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="教程,Hexo," />
+  <meta name="keywords" content="Hexo,教程," />
 
 
 
@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="Hexo 的个性化设置">
-<meta name="keywords" content="教程,Hexo">
+<meta name="description" content="打造属于自己的 Hexo">
+<meta name="keywords" content="Hexo,教程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 使用日记（二）">
 <meta property="og:url" content="https://ruoliang.top/post/Hexo_Diary_2.html">
 <meta property="og:site_name" content="Ruo Liang&#39;s Blog">
-<meta property="og:description" content="Hexo 的个性化设置">
+<meta property="og:description" content="打造属于自己的 Hexo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-11T14:25:57.889Z">
+<meta property="og:updated_time" content="2018-02-12T14:09:45.643Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 使用日记（二）">
-<meta name="twitter:description" content="Hexo 的个性化设置">
+<meta name="twitter:description" content="打造属于自己的 Hexo">
 
 
 
@@ -341,7 +341,7 @@
 
           
               <div class="post-description">
-                  Hexo 的个性化设置
+                  打造属于自己的 Hexo
               </div>
           
 
@@ -358,7 +358,39 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="了解基本的-Hexo-文件结构"><a href="#了解基本的-Hexo-文件结构" class="headerlink" title="了解基本的 Hexo 文件结构"></a>了解基本的 Hexo 文件结构</h1><h2 id="初始主目录结构"><a href="#初始主目录结构" class="headerlink" title="初始主目录结构"></a>初始主目录结构</h2><blockquote>
+<p>|– _config.yml<br>|– scaffolds<br>|– source<br>   |– _posts<br>|– themes<br>|– .gitignore<br>|– package.json</p>
+</blockquote>
+<h2 id="主目录文件简介"><a href="#主目录文件简介" class="headerlink" title="主目录文件简介"></a>主目录文件简介</h2><ul>
+<li><p><strong>_config.yml</strong></p>
+<p>_config.yml 是全局配置文件，采用 YAML 语法格式，可<a href="https://my.oschina.net/u/1861837/blog/526142?p=&lt;!--￼1--" target="_blank" rel="noopener">自行学习</a>。</p>
+<p>以下是该文件中默认内容的简单注释：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="comment">#网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span>   <span class="comment">#网站副标题</span></span><br><span class="line"><span class="attr">description:</span>  <span class="comment">#网站描述</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">John</span> <span class="string">Doe</span>  <span class="comment">#作者</span></span><br><span class="line"><span class="attr">language:</span>    <span class="comment">#语言</span></span><br><span class="line"><span class="attr">timezone:</span>    <span class="comment">#网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">http://yoursite.com</span>   <span class="comment">#你的站点Url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span>                       <span class="comment">#站点的根目录</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span>   <span class="comment">#文章的 永久链接 格式   </span></span><br><span class="line"><span class="attr">permalink_defaults:</span>    <span class="comment">#永久链接中各部分的默认值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Directory   </span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span>   <span class="comment">#资源文件夹，这个文件夹用来存放内容</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span>     <span class="comment">#公共文件夹，这个文件夹用于存放生成的站点文件。</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span>         <span class="comment"># 标签文件夹     </span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span>    <span class="comment">#归档文件夹</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span>      <span class="comment">#分类文件夹</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span>     <span class="comment">#Include code 文件夹</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span>                <span class="comment">#国际化（i18n）文件夹</span></span><br><span class="line"><span class="attr">skip_render:</span>                <span class="comment">#跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。    </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment"># 新文章的文件名称</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span>     <span class="comment">#预设布局</span></span><br><span class="line"><span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment"># 把标题转换为 title case</span></span><br><span class="line"><span class="attr">external_link:</span> <span class="literal">true</span> <span class="comment"># 在新标签中打开链接</span></span><br><span class="line"><span class="attr">filename_case:</span> <span class="number">0</span>     <span class="comment">#把文件名称转换为 (1) 小写或 (2) 大写</span></span><br><span class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span>  <span class="comment">#是否显示草稿</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span>  <span class="comment">#是否启动 Asset 文件夹</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span>      <span class="comment">#把链接改为与根目录的相对位址    </span></span><br><span class="line"><span class="attr">future:</span> <span class="literal">true</span>                <span class="comment">#显示未来的文章</span></span><br><span class="line"><span class="attr">highlight:</span>                    <span class="comment">#内容中代码块的设置    </span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  line_number:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  auto_detect:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  tab_replace:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Category &amp; Tag</span></span><br><span class="line"><span class="attr">default_category:</span> <span class="string">uncategorized</span></span><br><span class="line"><span class="attr">category_map:</span>          <span class="comment">#分类别名</span></span><br><span class="line"><span class="attr">tag_map:</span>            <span class="comment">#标签别名</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Date / Time format</span></span><br><span class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line"><span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span>         <span class="comment">#日期格式</span></span><br><span class="line"><span class="attr">time_format:</span> <span class="attr">HH:mm:ss</span>        <span class="comment">#时间格式    </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Pagination</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span>    <span class="comment">#分页数量</span></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">page</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">landscape</span>   <span class="comment">#主题名称</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="comment">#  部署部分的设置</span></span><br><span class="line"><span class="attr">deploy:</span>     </span><br><span class="line"><span class="attr">  type:</span>  <span class="comment">#类型，常用的git</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>package.json</strong></p>
+<p>包含 Hexo 框架的参数和所依赖插件</p>
+</li>
+<li><p><strong>scaffolds</strong></p>
+<p>包含新建 post 时需要的文件</p>
+</li>
+<li><p><strong>source</strong></p>
+<p>初始状态下包含<code>_posts</code>文件夹，用于存储新建的 post 。</p>
+<p>另外，开启<code>tag</code>、<code>categories</code>等功能后会在<code>source</code>中生成相应的文件夹。</p>
+</li>
+<li><p><strong>themes</strong></p>
+<p>包含 Hexo 主题文件</p>
+</li>
+</ul>
+<h1 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h1><h2 id="选择心仪的主题"><a href="#选择心仪的主题" class="headerlink" title="选择心仪的主题"></a>选择心仪的主题</h2><ul>
+<li>Hexo 主题官方汇总： <a href="https://hexo.io/themes/" target="_blank" rel="noopener">Themes | Hexo</a> </li>
+<li>知乎：<a href="https://www.zhihu.com/search?type=content&amp;q=hexo%E4%B8%BB%E9%A2%98" target="_blank" rel="noopener">有哪些好看的 Hexo 主题</a> </li>
+</ul>
+<h3 id="应用主题"><a href="#应用主题" class="headerlink" title="应用主题"></a>应用主题</h3><p>主要分以下两种方法：</p>
+<ol>
+<li>通常情况下，可将新的主题文件下载存放于<code>suorce</code>目录下，同时将<code>_config.yml</code>文件中<code>theme</code>的值修改为为主题名称。</li>
+<li>某些深度定制的主题没有提供主题文件，而是一个完整的 Hexo 文件夹。可选择将该站点作为新的 Blog 部署至 GItHub 。</li>
+</ol>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><h1 id="自定义样式"><a href="#自定义样式" class="headerlink" title="自定义样式"></a>自定义样式</h1>
       
     </div>
     
@@ -392,9 +424,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/教程/" rel="tag"># 教程</a>
-          
             <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
           
         </div>
       
@@ -472,8 +504,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -538,6 +579,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#了解基本的-Hexo-文件结构"><span class="nav-number">1.</span> <span class="nav-text">了解基本的 Hexo 文件结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始主目录结构"><span class="nav-number">1.1.</span> <span class="nav-text">初始主目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主目录文件简介"><span class="nav-number">1.2.</span> <span class="nav-text">主目录文件简介</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Theme"><span class="nav-number">2.</span> <span class="nav-text">Theme</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择心仪的主题"><span class="nav-number">2.1.</span> <span class="nav-text">选择心仪的主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#应用主题"><span class="nav-number">2.1.1.</span> <span class="nav-text">应用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置主题"><span class="nav-number">2.1.2.</span> <span class="nav-text">配置主题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义样式"><span class="nav-number">3.</span> <span class="nav-text">自定义样式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
