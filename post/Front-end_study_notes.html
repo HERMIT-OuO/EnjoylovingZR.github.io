@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="Ruo Liang&#39;s Blog">
 <meta property="og:description" content="前端的基础内容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-01T15:40:59.962Z">
+<meta property="og:updated_time" content="2018-03-02T04:55:37.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端学习笔记">
 <meta name="twitter:description" content="前端的基础内容">
@@ -440,6 +440,39 @@
 </ul>
 </li>
 <li><p><code>&lt;caption&gt;&lt;/caption&gt;</code>标签——<strong>为表格添加标题和摘要</strong> </p>
+<ul>
+<li><p><strong>摘要</strong></p>
+<p>摘要的内容是不会在浏览器中显示出来的。它的作用是增加表格的可读性(语义化)，使搜索引擎更好的读懂表格内容，还可以使屏幕阅读器更好的帮助特殊用户读取表格内容。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">summary</span>=<span class="string">"表格简介文本"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>标题</strong></p>
+<p>用以描述表格内容，标题的显示位置：表格上方。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">caption</span>&gt;</span>标题文本<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>…<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>…<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        …</span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">…</span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;a&gt;&lt;/a&gt;</code>标签——<strong>超链接</strong> </p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span>  <span class="attr">href</span>=<span class="string">"目标网址"</span>  <span class="attr">title</span>=<span class="string">"鼠标滑过显示的文本"</span>&gt;</span>链接显示的文本<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>title 属性的作用，鼠标滑过链接文字时会显示这个属性的文本内容。这个属性在实际网页开发中作用很大，主要方便搜索引擎了解链接地址的内容（语义化更友好）。</p>
+</li>
+<li><p><code>&lt;a&gt;</code>标签在默认情况下，链接的网页是在当前浏览器窗口中打开，有时我们需要在新的浏览器窗口中打开。</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"目标网址"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>click here!<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 mailto 在网页中链接 Email 地址。</p>
+</li>
+</ul>
+</li>
+<li><p><code>&lt;img&gt;</code>标签——<strong>图片</strong> </p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"图片地址"</span> <span class="attr">alt</span>=<span class="string">"下载失败时的替换文本"</span> <span class="attr">title</span> = <span class="string">"提示文本"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>src：</strong>标识图像的位置</li>
+<li><strong>alt：</strong>指定图像的描述性文本，当图像不可见时（下载不成功时），可看到该属性指定的文本</li>
+<li><strong>title：</strong>提供在图像可见时对图像的描述(鼠标滑过图片时显示的文本)</li>
+<li>图像可以是 GIF，PNG，JPEG 格式的图像文件</li>
+</ul>
+</li>
+<li><p>​</p>
 </li>
 </ul>
 <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><p><strong>CSS 样式是表现</strong>。就像网页的外衣。比如，标题字体、颜色变化，或为标题加入背景图片、边框等。所有这些用来改变内容外观的东西称之为表现。</p>
