@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="Ruo Liang&#39;s Blog">
 <meta property="og:description" content="前端的基础内容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-02T04:55:37.245Z">
+<meta property="og:updated_time" content="2018-03-03T13:43:33.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端学习笔记">
 <meta name="twitter:description" content="前端的基础内容">
@@ -358,7 +358,8 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="HTMl"><a href="#HTMl" class="headerlink" title="HTMl"></a>HTMl</h1><p><strong>HTML 是网页内容的载体</strong>。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="HTMl"><a href="#HTMl" class="headerlink" title="HTMl"></a>HTMl</h1><p>​    </p>
+<p><strong>HTML 是网页内容的载体</strong>。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。</p>
 <h2 id="HTML-标签"><a href="#HTML-标签" class="headerlink" title="HTML 标签"></a>HTML 标签</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ul>
 <li><strong>标签</strong>由英文尖括号<code>&lt;</code>和<code>&gt;</code>括起来，如<code>&lt;html&gt;</code>就是一个标签。</li>
 <li>HTML 中的标签一般都是成对出现的，分<strong>开始标签</strong>和<strong>结束标签</strong>。结束标签比开始标签多了一个<code>/</code>。</li>
@@ -472,11 +473,87 @@
 <li>图像可以是 GIF，PNG，JPEG 格式的图像文件</li>
 </ul>
 </li>
-<li><p>​</p>
+<li><p><code>&lt;form&gt;&lt;/form&gt;</code>标签——<strong>表单</strong> （用于交互）</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>   <span class="attr">method</span>=<span class="string">"传送方式"</span>   <span class="attr">action</span>=<span class="string">"服务器文件"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>action</strong> <strong>：</strong>浏览者输入的数据被传送到的地方</p>
+</li>
+<li><p><strong>method</strong> <strong>：</strong> 数据传送的方式（get/post）</p>
+</li>
+<li><p>所有表单控件（文本框、文本域、按钮、单选框、复选框等）都必须放在<code>&lt;form&gt;&lt;/form&gt;</code>标签之间</p>
+</li>
+<li><p><strong>文本、密码输入框</strong> ：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text/password"</span> <span class="attr">name</span>=<span class="string">"名称"</span> <span class="attr">value</span>=<span class="string">"文本"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>type</strong> ：</p>
+<p> 当type=”<strong>text</strong>“时，输入框为<strong>文本</strong>输入框</p>
+<p> 当type=”<strong>password</strong>“时, 输入框为密码输入框</p>
+</li>
+<li><p><strong>name</strong> ：</p>
+<p> 为文本框命名，以备后台程序ASP 、PHP使用</p>
+</li>
+<li><p><strong>value</strong> ：</p>
+<p> 为文本输入框设置默认值（起提示作用）</p>
 </li>
 </ul>
-<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><p><strong>CSS 样式是表现</strong>。就像网页的外衣。比如，标题字体、颜色变化，或为标题加入背景图片、边框等。所有这些用来改变内容外观的东西称之为表现。</p>
-<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><p><strong>JavaScript 是用来实现网页上的特效效果</strong>。如：鼠标滑过弹出下拉菜单。或鼠标滑过表格的背景颜色改变。还有焦点新闻（新闻图片）的轮换。可以这么理解，有动画的，有交互的一般都是用JavaScript来实现的。</p>
+</li>
+<li><p><strong>文本域</strong> ：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span>  <span class="attr">rows</span>=<span class="string">"行数"</span> <span class="attr">cols</span>=<span class="string">"列数"</span>&gt;</span>文本<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>&lt;textarea&gt;</code>标签是成对出现的，以<code>&lt;textarea&gt;</code>开始，以<code>&lt;/textarea&gt;</code>结束</li>
+<li><strong>cols</strong>  ：多行输入域的<strong>列数</strong></li>
+<li><strong>rows</strong>  ：多行输入域的<strong>行数</strong></li>
+<li>在<code>&lt;textarea&gt;&lt;/textarea&gt;</code>标签之间可以输入<strong>默认值</strong>  </li>
+</ul>
+</li>
+<li><p><strong>单选框、复选框</strong> ：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span>   <span class="attr">type</span>=<span class="string">"radio/checkbox"</span>   <span class="attr">value</span>=<span class="string">"值"</span>    <span class="attr">name</span>=<span class="string">"名称"</span>   <span class="attr">checked</span>=<span class="string">"checked"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>type</strong> :</p>
+<p> 当 <strong>type=”radio” </strong>时，控件为<strong>单选框</strong></p>
+<p> 当 <strong>type=”checkbox”</strong> 时，控件为<strong>复选框</strong></p>
+</li>
+<li><p><strong>value：</strong>提交数据到服务器的值（后台程序PHP使用）</p>
+</li>
+<li><p><strong>name：</strong>为控件命名，以备后台程序 ASP、PHP 使用</p>
+</li>
+<li><p><strong>checked：</strong>当设置 checked=”checked” 时，该选项被默认选中</p>
+</li>
+<li><p>注: <strong>同一组</strong> 的单选按钮，name 取值一定要一致</p>
+</li>
+</ul>
+</li>
+<li><p><strong>下拉列表</strong> ：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"提交值"</span> &gt;</span>文本<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 若设置 selected = “selected” ，则该选项被默认选中（在 option 标签中）</p>
+<p> 若设置 multiple = “multiple”，则开启多选功能（在 select 标签中）</p>
+</li>
+<li><p><strong>提交按钮</strong> ：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span>   <span class="attr">type</span>=<span class="string">"submit"</span>   <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>type</strong> ：只有当 type 值设置为 submit 时，按钮才有提交作用</li>
+<li><strong>value</strong> ：按钮上显示的文字</li>
+</ul>
+</li>
+<li><p><strong>重置按钮</strong> ：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span>	<span class="attr">type</span>=<span class="string">"reset"</span> <span class="attr">value</span>=<span class="string">"重置"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>type</strong> ：只有当type值设置为 reset 时，按钮才有重置作用</li>
+<li><strong>value</strong> ：按钮上显示的文字</li>
+</ul>
+</li>
+<li><p><code>&lt;label&gt;&lt;/label&gt;</code>标签</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"控件id名称"</span>&gt;</span>文本<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> label 标签不会向用户呈现任何特殊效果，它的作用是为鼠标用户改进了可用性。如果你在 label 标签内点击文本，就会触发此控件。就是说，当用户单击选中该 label 标签时，浏览器就会自动将焦点转到和标签相关的表单控件上（就自动选中和该 label 标签相关连的表单控件上）。</p>
+<p> 注意：标签的 for 属性中的值应当与相关控件的 id 属性值（使用时需在相关控件标签中添加 id ）一定要相同。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><p>​    </p>
+<p><strong>CSS 样式是表现</strong>。就像网页的外衣。比如，标题字体、颜色变化，或为标题加入背景图片、边框等。所有这些用来改变内容外观的东西称之为表现。</p>
+<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><p>​    </p>
+<p><strong>JavaScript 是用来实现网页上的特效效果</strong>。如：鼠标滑过弹出下拉菜单。或鼠标滑过表格的背景颜色改变。还有焦点新闻（新闻图片）的轮换。可以这么理解，有动画的，有交互的一般都是用JavaScript来实现的。</p>
 
       
     </div>
